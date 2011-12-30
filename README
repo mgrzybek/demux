@@ -1,0 +1,20 @@
+Description:
+
+The program is used to enqueue its input and process it thanks
+to a user-defined command running into threads. It can be useful to launch
+several mono-threaded workers to process a large number of elements :
+ - bzip2 / gzip a list of files ;
+ - use a shell script to process a list of files...
+
+Example:
+find . -name "*.bz2" | dm bzip2\ -d 4 -
+
+Build dependancies:
+boost/regex.hpp
+boost/thread.hpp
+boost/thread/mutex.hpp
+boost/lexical_cast.hpp
+
+Build tool:
+cmake
+
